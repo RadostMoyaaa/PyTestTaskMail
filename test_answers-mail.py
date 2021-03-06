@@ -38,7 +38,7 @@ def test_set_len():
 
 # Параметризованный тест на проверку объединения множеств
 @pytest.mark.parametrize('fst_set, snd_set, rez_set', [[{1,2}, {3,4}, {1,2,3,4}], [set({}), set({}), set({})], [{"Set"}, {1}, {"Set",1}]])
-def test_list_3_parameters(fst_set, snd_set, rez_set):
+def test_dict_parameters(fst_set, snd_set, rez_set):
     rl_value = fst_set | snd_set
     assert rl_value == rez_set, f'Error sets:{fst_set, snd_set}, exp_set:{rez_set}, rl_set:{rl_value}'
 
